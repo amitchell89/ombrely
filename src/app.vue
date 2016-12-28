@@ -14,6 +14,7 @@ export default {
 
 <style>
 .message {
-  color: blue;
+  background: #aaa;
+  color: white;
 }
 </style>

@@ -4,7 +4,8 @@
   "description": "Random Gradient Generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,9 @@
     "webpack": "^1.12.2",
     "css-loader": "^0.23.0",
     "style-loader": "^0.13.0",
+    "sass-loader": "^4.0.2",
     "vue-loader": "^7.3.0",
-    "vue-html-loader": "^1.0.0"
+    "vue-html-loader": "^1.0.0",
+    "vue-hot-reload-api": "^1.2.0"
   }
 }

@@ -4,5 +4,5 @@ Random Gradient Generator built using vue.js
 ## Setup
 
 `npm install`
-`webpack`
-open `index.html`
+`npm run webpack`
+visit `localhost.com/8080`
