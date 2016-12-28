@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn {
+  color: #ffffff;
+  background: none;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  padding: 1rem;
+  font-size: 2rem;
+}
