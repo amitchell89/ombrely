@@ -2,6 +2,7 @@
   <div class="container" v-bind:style="gradient">
     <div class="message">{{ msg }}</div>
     <button v-on:click='generateGradient' class="btn">Hit Me</button>
+    <appFooter></appFooter>
   </div>
 </template>
 
