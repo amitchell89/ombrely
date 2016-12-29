@@ -1,5 +1,7 @@
 <template>
-  <p>&copy; {{ date }} Ombrely &bull; All Rights Reserved</p>
+  <footer>
+    <p>&copy; {{ date }} Ombrely &bull; All Rights Reserved</p>
+  </footer>
 </template>
 
 <script>
@@ -13,7 +15,7 @@ export default {
 </script>
 
 <style>
-p {
+footer {
   border-top: 3px solid #ffffff;
   color: #ffffff;
   font-size: 0.875rem;
