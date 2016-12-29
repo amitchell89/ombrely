@@ -1,6 +1,6 @@
 <template>
   <div class="container" v-bind:style="gradient">
-    <div class="message">{{ msg }}</div>
+    <appHeader></appHeader>
     <button v-on:click='generateGradient' class="btn">Hit Me</button>
     <appFooter></appFooter>
   </div>
@@ -10,7 +10,6 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Ombrely',
       hex1: 'eeeeee',
       hex2: 'aaaaaa'
     }
@@ -40,9 +39,8 @@ export default {
 </script>
 
 <style>
-.message {
-  color: white;
-  padding-bottom: 2rem;
+.btn {
+  margin-top: calc(50vh - 78px - 35px);
 }
 </style>
 
