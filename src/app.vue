@@ -3,21 +3,22 @@
   <div class="container" v-bind:style="gradient">
     <appHeader></appHeader>
     <div class="buttons">
-      <button v-on:click='toggleLock("lock1")' class="btn btn--lock"><i class= 'fa' v-bind:class="{ 'fa-unlock-alt': !lock1, 'fa-lock': lock1 }"></i></button>
-      <button v-on:click='generateGradient' class="btn btn--hit">Hit Me</button>
-      <button v-on:click='toggleLock("lock2")' class="btn btn--lock"><i class= 'fa' v-bind:class="{ 'fa-unlock-alt': !lock2, 'fa-lock': lock2 }"></i></button>
-      <br />
+      <div>
+        <button v-on:click='toggleLock("lock1")' class="btn btn--lock"><i class= 'fa' v-bind:class="{ 'fa-unlock-alt': !lock1, 'fa-lock': lock1 }"></i></button>
+        <button v-on:click='generateGradient' class="btn btn--hit">Hit Me</button>
+        <button v-on:click='toggleLock("lock2")' class="btn btn--lock"><i class= 'fa' v-bind:class="{ 'fa-unlock-alt': !lock2, 'fa-lock': lock2 }"></i></button>
+      </div>
       <button v-on:click='toggleModal' class="btn btn--css">{{ modal ? 'Close CSS' : 'View CSS' }}</button>
       <button class="btn btn--copy" v-clipboard="clipCSS">Copy To Clipboard</button>
     </div>
     <div v-if="modal" class="modal">
-      <p>
+      <p class="modal__css">
       {{ line1 }}<br />
       {{ line2 }}<br />
       {{ line3 }}
       </p>
       <button v-on:click='toggleModal' class="btn btn--close"><i class= 'fa fa-times'></i></button>
-    </div>
+     </div>
     <appFooter></appFooter>
   </div>
 </template>
@@ -87,25 +88,26 @@ export default {
 
 .buttons {
   margin-top: calc(50vh - 163px);
+  padding: 0 1rem;
 }
 .btn {
-  padding: 1rem 2rem;
-  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.75rem;
 }
 .btn--hit {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  font-size: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: calc(219px - 3rem);
 }
 .btn--css {
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 150px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .btn--copy {
   font-size: 1rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 .btn--close {
   font-size: 1rem;
@@ -125,6 +127,31 @@ export default {
   top: 0;
   left: 0;
   right: 0;
+}
+.modal__css {
+  line-height: 1.5;
+}
+
+@media (max-width: 570px) {
+  .btn--close {
+    position: static;
+  }
+}
+@media (max-width: 414px) {
+  .btn--hit {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: auto;
+  }
+  .btn--hit, .btn--lock {
+    font-size: 1.25rem;
+  }
+  .btn--css, .btn--copy {
+    width: 270px;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 </style>
