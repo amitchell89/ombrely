@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/amitchell89/ombrely#readme",
   "dependencies": {
+    "forever": "^0.15.3",
     "vue": "^2.1.8",
     "vue-clipboards": "^0.2.4"
   },
