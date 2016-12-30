@@ -7,6 +7,9 @@ require('./css/index.scss');
 Vue.component('appFooter',appFooter)
 Vue.component('appHeader',appHeader)
 
+var VueClipboard = require('vue-clipboard')
+Vue.use(VueClipboard)
+
 new Vue({
   el: 'app',
   components: { App }
