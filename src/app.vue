@@ -8,6 +8,7 @@
       <button v-on:click='toggleLock("lock2")' class="btn btn--lock"><i class= 'fa' v-bind:class="{ 'fa-unlock-alt': !lock2, 'fa-lock': lock2 }"></i></button>
       <br />
       <button v-on:click='toggleModal' class="btn btn--css">{{ modal ? 'Close CSS' : 'View CSS' }}</button>
+      <button class="btn btn--copy" v-clipboard="clipCSS">Copy To Clipboard</button>
     </div>
     <div v-if="modal" class="modal">
       <p>
@@ -15,6 +16,7 @@
       {{ line2 }}<br />
       {{ line3 }}
       </p>
+      <button v-on:click='toggleModal' class="btn btn--close"><i class= 'fa fa-times'></i></button>
     </div>
     <appFooter></appFooter>
   </div>
@@ -48,6 +50,9 @@ export default {
     },
     line3: function () {
       return 'background: linear-gradient(left, #' + this.hex1 + ', #' + this.hex2 +');'
+    },
+    clipCSS: function () {
+      return 'background: -webkit-linear-gradient(left, #' + this.hex1 + ', #' + this.hex2 +');\n' + 'background: -moz-linear-gradient(left, #' + this.hex1 + ', #' + this.hex2 +');\n' + 'background: linear-gradient(left, #' + this.hex1 + ', #' + this.hex2 +');'
     }
   },
   methods: {
@@ -81,33 +86,45 @@ export default {
 <style>
 
 .buttons {
-  margin-top: calc(50vh - 195px);
+  margin-top: calc(50vh - 163px);
 }
 .btn {
   padding: 1rem 2rem;
   font-size: 2rem;
 }
 .btn--hit {
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   font-size: 2rem;
 }
 .btn--css {
   font-size: 1rem;
-  margin: 2rem 0;
+  margin-top: 2rem;
   width: 150px;
+  margin-right: 1rem;
+}
+.btn--copy {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.btn--close {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
 .modal {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.8);
+  border-bottom: 3px solid #ffffff;
   color: #ffffff;
-  border: 3px solid #ffffff;
-  border-radius: 10px;
   z-index: 10;
   padding: 1rem 2rem;
-  margin: 0 auto;
   text-align: left;
-  width: 100%;
-  max-width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 </style>
