@@ -11,6 +11,7 @@ module.exports = {
     filename: 'build.js'
   },
   resolve: {
+    extensions: ['', '.js', '.jsx', '.css', 'png', 'svg'],
     alias: {
       'vue$': 'vue/dist/vue.common.js'
     }
