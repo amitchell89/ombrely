@@ -138,6 +138,9 @@ export default {
   }
 }
 @media (max-width: 414px) {
+  .buttons {
+    margin-top: calc(50vh - 175px);
+  }
   .btn--hit {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
