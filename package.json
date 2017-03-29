@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack-dev-server --inline --hot",
-    "server": "src/server.js"
+    "server": "src/server_3001.js"
   },
   "repository": {
     "type": "git",
@@ -33,13 +33,13 @@
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-stage-0": "^6.1.2",
     "babel-runtime": "^5.8.0",
-    "webpack": "^1.12.2",
     "css-loader": "^0.23.0",
-    "style-loader": "^0.13.0",
+    "file-loader": "^0.9.0",
     "sass-loader": "^4.0.2",
-    "vue-loader": "^7.3.0",
-    "vue-html-loader": "^1.0.0",
+    "style-loader": "^0.13.0",
     "vue-hot-reload-api": "^1.2.0",
-    "file-loader": "^0.9.0"
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^7.3.0",
+    "webpack": "^2.2.1"
   }
 }
